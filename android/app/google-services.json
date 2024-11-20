@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1014334930189",
+    "project_id": "auth-firebase-c9350",
+    "storage_bucket": "auth-firebase-c9350.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014334930189:android:247459e045a480239cc444",
+        "android_client_info": {
+          "package_name": "com.example.app_auth_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD3RNHOsaBOYGL1MjRXecskWRBQRntGXIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
