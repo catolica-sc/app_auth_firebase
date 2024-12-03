@@ -66,4 +66,7 @@ flutter:
   assets:
     - assets/Fundo_catolica.jpg
     - assets/Icone_google.jpg
-
+  fonts:
+    - family: Pacifico
+      fonts:
+        - asset: fonts/Pacifico-Regular.ttf

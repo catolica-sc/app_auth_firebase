@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
       home: Scaffold(
         body: Stack(
           children: [
-             Container(
+            Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('assets/Fundo_catolica.jpg'),
@@ -21,12 +21,10 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-
             Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-
                   Container(
                     padding: EdgeInsets.all(16),
                     margin: EdgeInsets.symmetric(horizontal: 16),
@@ -43,6 +41,7 @@ class LoginPage extends StatelessWidget {
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
+                            fontFamily: 'Pacifico',
                           ),
                         ),
                         SizedBox(height: 20),
@@ -52,6 +51,7 @@ class LoginPage extends StatelessWidget {
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
+                            fontFamily: 'Pacifico',
                           ),
                         ),
                         Text(
@@ -60,6 +60,7 @@ class LoginPage extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.black,
+                            fontFamily: 'Pacifico',
                           ),
                         ),
                       ],
@@ -69,7 +70,7 @@ class LoginPage extends StatelessWidget {
                   // Botão de login com Google
                   ElevatedButton.icon(
                     key: Key('googleLoginButton'),
-                    icon: Image.asset('assets/Icone_google.jpg', height: 24),
+                    icon: Image.asset('assets/Icone_google.jpg', height: 32),
                     label: Text('Login com Google'),
                     onPressed: () async {
                       showDialog(

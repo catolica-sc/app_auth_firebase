@@ -3,6 +3,8 @@ import '../viewmodels/auth_viewmodel.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     final AuthViewModel authViewModel = Provider.of(context);
@@ -13,7 +15,7 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Home'),
         ),
-        body: Center(
+        body: const Center(
           child: Text('Nenhum usuário logado'),
         ),
       );
@@ -21,11 +23,11 @@ class HomePage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
         actions: [
           IconButton(
-            key: Key('logoutButton'),
-            icon: Icon(Icons.logout),
+            key: const Key('logoutButton'),
+            icon: const Icon(Icons.logout),
             onPressed: () async {
               await authViewModel.signOut(context);
             },
@@ -36,7 +38,7 @@ class HomePage extends StatelessWidget {
         children: [
           // Imagem de fundo
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/Fundo_catolica.jpg'), // Certifique-se de ter a imagem no diretório assets
                 fit: BoxFit.cover,
@@ -46,24 +48,49 @@ class HomePage extends StatelessWidget {
           // Conteúdo da tela
           Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text('Name: ${user.displayName ?? 'Guest'}'),
-                Text('Email: ${user.email ?? 'No email'}'),
-                user.photoURL != null ? Image.network(user.photoURL!) : Container(),
-                SizedBox(height: 32),
-                // Botão decorado de desconectar login
+                const SizedBox(height: 80), // Ajuste a altura conforme necessário
+                const Text(
+                  'Boas férias até 2025',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontFamily: 'Pacifico',
+                  ),
+                ),
+                const SizedBox(height: 60),
+                Text(
+                  ' ${user.displayName ?? 'Guest'}',
+                  style: const TextStyle(
+                    fontSize: 32,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontFamily: 'Pacifico',
+                  ),
+                ),
+                const SizedBox(height: 20),
+                user.photoURL != null
+                    ? Image.network(
+                  user.photoURL!,
+                  height: 350,
+                  width: 350,
+                )
+                    : Container(),
+                const SizedBox(height: 40),
+
                 ElevatedButton(
-                  key: Key('logoutButton'),
+                  key: const Key('logoutButton'),
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white, backgroundColor: Colors.red, // Cor do texto do botão
-                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-                    textStyle: TextStyle(fontSize: 18),
+                    padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 14),
+                    textStyle: const TextStyle(fontSize: 24),
                   ),
                   onPressed: () async {
                     await authViewModel.signOut(context);
                   },
-                  child: Text('Desconectar Login'),
+                  child: const Text('Desconectar Login'),
                 ),
               ],
             ),
