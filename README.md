@@ -2,9 +2,9 @@
 
 ### Avaliação N3 Dispositivos Moveis
 ## Alunos:
- Santhiago Chapiewski
- Pedro Henrique dos Santos
- Vinicius Froes
+- Santhiago Chapiewski
+- Pedro Henrique dos Santos
+- Vinicius Froes
 
 ## Listagem de funções por telas
 
